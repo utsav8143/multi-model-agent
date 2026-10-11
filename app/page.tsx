@@ -33,6 +33,7 @@ export default function Chat() {
   const [input, setInput] = useState('');
   const[files,setFiles]=useState<FileList | undefined>(undefined);
   const fileInputRef=useRef<HTMLInputElement>(null);
+  const [menu, setMenu] = useState("false");
 
   const { messages, sendMessage } = useChat({
     transport: new DefaultChatTransport({
